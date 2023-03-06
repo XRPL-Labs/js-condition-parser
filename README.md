@@ -54,6 +54,7 @@ proUser + countryFlag:NL + languageFlag:NL + !optedOut > 2
   - `0-9`
   - `_` (underscore)
   - `:` (colon)
+  - `.` (dot)
 - Flags _must_ start with `a-z` or `A-Z`.
 - Flags should be present in the condition in plain texts (so no quotes surrounding them)
 - Flags are case sensitive
