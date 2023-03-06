@@ -1,6 +1,6 @@
 {
   "name": "condition-flags-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parse/Apply JS like condition expressions on an object of flags",
   "engines": {
     "node": ">=14.17.0"
