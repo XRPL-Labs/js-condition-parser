@@ -1,4 +1,4 @@
-const flagRe = new RegExp('([a-zA-Z][a-zA-Z0-9:_]+)', 'g')
+const flagRe = new RegExp('([a-zA-Z][a-zA-Z0-9:_.]+)', 'g')
 
 export const validate = (condition, throwException = false) => {
   const invalidParenthesis = condition.split('(').length !== condition.split(')').length

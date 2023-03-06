@@ -13,6 +13,19 @@ describe('Logic', () => {
   })()
 })
 
+describe('Format', () => {
+  (() => {
+    const condition = '!supporttickets:missive && !xapp:xumm.support'
+    test(condition, () => {
+      expect(validate(condition)).toBeTruthy()
+      expect(apply(condition, [ 'supporttickets:missive', 'xapp:xumm.support' ])).toBeFalsy()
+      expect(apply(condition, [ 'supporttickets:missive' ])).toBeFalsy()
+      expect(apply(condition, [ 'xapp:xumm.support' ])).toBeFalsy()
+      expect(apply(condition, [ 'aaaa.aaaa', 'bbbb:bbbb' ])).toBeTruthy()
+    })
+  })()
+})
+
 describe('Threshold', () => {
   (() => {
     const condition = '(someFlag_123 + anotherFlagX) - (countryFlag:NL + countryFlag:GB)'
